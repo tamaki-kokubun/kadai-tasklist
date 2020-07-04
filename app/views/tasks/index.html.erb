@@ -1,4 +1,13 @@
-<h1>メッセージ一覧</h1>
+
+<% if logged_in? %>
+  <p>ログイン完了ユーザ: <%= current_user.name %></p>
+<% else %>
+  <div class="center jumbotron">
+    <div>
+        <h1>メッセージ一覧</h1>
+    </div>
+  </div>
+<% end %>
 
 <ul>
   <% @tasks.each do |task| %>
